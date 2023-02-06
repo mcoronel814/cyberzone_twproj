@@ -1,84 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>CyberZone</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <div class="full-page">
+<body style="background: linear-gradient(#04080f, #303030);">
+    <nav>
         <div class="navbar">
-            <div>
-                <a href="./index.html">CyberZone</a>
+            <div class="logo"><a href="#">CyberZone</a></div>
+            <ul class="menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Learn_Now">Learn Now</a></li>
+                <li><a href="#Resources">Resources</a></li>
+                <li>
+                    <button class='loginbtn'
+                        onclick="document.getElementById('login-form').style.display='block'"
+                        style="width:auto;">Login</button>
+                </li>
+            </ul>
+    </nav>
+    </div>
+    <div id='login-form' class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button' onclick='login()' class='toggle-btn'>Log In </button>
+                <button type='button' onclick='register()' class='toggle-btn'>Register</button>
             </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="./Learn_Now.html">Learn Now</a></li>
-                    <li><a href="./About_Us.html">About Us</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li>
-                        <button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'"
-                            style="width: auto">
-                            Login
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="login-form" class="login-page">
-            <div class="form-box">
-                <div class="button-box">
-                    <div id="btn"></div>
-                    <button type="button" onclick="login()" class="toggle-btn">
-                        Log In
-                    </button>
-                    <button type="button" onclick="register()" class="toggle-btn">
-                        Register
-                    </button>
-                </div>
-                <form id="login" class="input-group-login">
-                    <input type="text" class="input-field" placeholder="Email Id" required />
-                    <input type="password" class="input-field" placeholder="Enter Password" required />
-                    <input type="checkbox" class="check-box" /><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Log in</button>
-                </form>
-                <form id="register" class="input-group-register">
-                    <input type="text" class="input-field" placeholder="First Name" required />
-                    <input type="text" class="input-field" placeholder="Last Name " required />
-                    <input type="email" class="input-field" placeholder="Email Id" required />
-                    <input type="password" class="input-field" placeholder="Enter Password" required />
-                    <input type="password" class="input-field" placeholder="Confirm Password" required />
-                    <input type="checkbox" class="check-box" /><span>I agree to the terms and conditions</span>
-                    <button type="submit" class="submit-btn">Register</button>
-                </form>
-            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='checkbox' class='check-box'><span>Remember Password</span>
+                <button type='submit' class='submit-btn'>Log in</button>
+            </form>
+            <form id='register' class='input-group-register'>
+                <input type='text' class='input-field' placeholder='First Name' required>
+                <input type='text' class='input-field' placeholder='Last Name ' required>
+                <input type='email' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='password' class='input-field' placeholder='Confirm Password' required>
+                <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                <button type='submit' class='submit-btn'>Register</button>
+            </form>
         </div>
     </div>
     </div>
     <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
         function register() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
         }
         function login() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0px";
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
         }
     </script>
     <script>
-        var modal = document.getElementById("login-form");
+        var modal = document.getElementById('login-form');
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        };
+        }
     </script>
+    </ul>
+    </div>
+    </nav>
+    <section id="Home">Welcome!</section>
+    <div class="home-text">
+        <h1>Secure Your Cyberspace, Secure Your Digital Life</h1>
+    </div>
+    <section id="About">About Us</section>
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa </p>
+    </div>
+    <div class="column profile"></div>
+    <section id="Learn_Now">Learn Now</section>
+    <section id="Resources">Resources</section>
+    <div class="wrapper">
+        <ul class="mainMenu">
+            <li class="item" id="account">
+                <a href="#account" class="btn">Lorem Ipsum</a>
+                <div class="subMenu">
+                    <a href="">Item-1</a>
+                    <a href="">Item-2</a>
+                    <a href="">Item-3</a>
+                </div>
+            </li>
+            <li class="item" id="about">
+                <a href="#about" class="btn">Lorem Ipsum</a>
+                <div class="subMenu">
+                    <a href="">Item-1</a>
+                    <a href="">Item-2</a>
+                </div>
+            </li>
+            <li class="item" id="network">
+                <a href="#network" class="btn"></i>Network With Us</a>
+                <div class="subMenu">
+                    <a href="https://www.linkedin.com/in/tianna-alvarez/">Tianna Alvarez</a>
+                    <a href="https://www.linkedin.com/in/manuel-coronel-6958a0237/">Manuel Coronel</a>
+                    <a href="https://www.linkedin.com/in/arise-washington-61053220b/">Arise Washington</a>
+                </div>
+            </li>
+            <li class="item" id="doc">
+                <a href="#doc" class="btn">Extra Cybersecurity Learning Materials </a>
+                <div class="subMenu">
+                    <a href="https://docs.google.com/document/d/1bdte__5uZ1rAyKeuojt7PBxRJPQndBSWsfOkhPElIEs/edit">Study
+                        Materials</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="button">
+        <a href="#Home"><i class="fas fa-arrow-up"></i>TOP</a>
+    </div>
 </body>
-</html>
+
+</html
