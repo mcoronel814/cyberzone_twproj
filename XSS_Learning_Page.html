@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberZone</title>
+    <link rel="stylesheet" href="XSS_Learning_Page.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="full-page">
+      <div class="navbar">
+        <div>
+          <a href="./index.html">CyberZone</a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="./Learn_Now.html">Learn Now</a></li>
+            <li><a href="./About_Us.html">About Us</a></li>
+            <li><a href="#">Resources</a></li>
+            <li>
+              <button
+                class="loginbtn"
+                onclick="document.getElementById('login-form').style.display='block'"
+                style="width: auto"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="login-form" class="login-page">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" onclick="login()" class="toggle-btn">
+              Log In
+            </button>
+            <button type="button" onclick="register()" class="toggle-btn">
+              Register
+            </button>
+          </div>
+          <form id="login" class="input-group-login">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >Remember Password</span
+            >
+            <button type="submit" class="submit-btn">Log in</button>
+          </form>
+          <form id="register" class="input-group-register">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Last Name "
+              required
+            />
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Confirm Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >I agree to the terms and conditions</span
+            >
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+      <div id="XSS" class="learning-page">
+        <div class="card--outlined">
+          <section class="learning-text-section">
+            <h1 class="section-title">Introduction to Cross Site Scripting</h1>
+            <p class="reading-text">
+              Cross Site Scripting (XSS) is one of the most common and
+              vulnerable attacks. XSS is an attack where malicious code is
+              injected into a website and is used to harm the victim’s browser.
+              The purpose of this attack is to steal the victim’s identity data.
+              In most cases, the scripts are used to steal the users’ cookies as
+              they help users automatically log into the site. XSS is a
+              client-side attack, meaning that the victims are the unsuspecting
+              visitors of the site.
+            </p>
+            <hr class="dashed-line">
+            <h1 class="section-title">How is XSS performed?</h1>
+            <p class="reading-text">
+              Cross Site Scripting (XSS) is one of the most common and
+              vulnerable attacks. XSS is an attack where malicious code is
+              injected into a website and is used to harm the victim’s browser.
+              The purpose of this attack is to steal the victim’s identity data.
+              In most cases, the scripts are used to steal the users’ cookies as
+              they help users automatically log into the site. XSS is a
+              client-side attack, meaning that the victims are the unsuspecting
+              visitors of the site.
+            </p>
+            <hr class="dashed-line">
+            <h1 class="section-title">Types of XSS</h1>
+            <p class="reading-text">
+              The three main categories of XSS are Reflected XSS, Stored XSS,
+              and DOM.
+              <div class="reading-bullet-list">
+              <li class="reading-bullet">
+                Reflective XSS occurs when the results of a malicious script are
+                being returned to the website. This type of XSS is not saved
+                permanently. An example of this is a website where the victim as
+                a login. The attacker can insert a script which will return the
+                victim’s login information so that they can used it at their
+                convenience. This code can also be included in fake url or HTTP
+                parameters.
+              </li>
+              <li class="reading-bullet">
+                Stored XSS is when the malicious script is being saved on the
+                webserver. Therefore, its executed whenever the users calls the
+                appropriate functionality. This affects users on a larger scale
+                because its able to to attack multiple users at the same time.
+                In addition, because the script is saved on the webserver, it’ll
+                cause longterm damage. This type of XSS is performed by
+                inserting the malicious script via a vulnerable inout. By doing
+                this, the script will be saved in te database and executed
+                whenever the appropriate function is called.
+              </li>
+              <li class="reading-bullet">
+                DOM-based attacks are also called client-side XSS. DOm stands
+                for, and instead of attacking the web server, the scripts are
+                used to modify the user’s browser. In this attack, the script is
+                sent as a parameter. Therefore, that script will be used to
+                create a page by the browser where the users can insert their
+                information. Then that information will be sent to the attacker.
+              </li>
+            </div>
+            </p>
+            <hr class="dashed-line">
+            <form name="quiz" id="quiz" class="XSS-quiz">
+              <div class="question-1">
+                <p class="question">1. What is cross-site scripting?</p>
+                <div id="answer-choices1" class="answer-choices">
+                  <input type="radio" name="ans1" value="A">Malicious code that is executed to redirect users to malicious websites to steal personal info.<br>
+                  <input type="radio" name="ans1" value="B">Injection code used to steal information from databases.<br>
+                  <input type="radio" name="ans1" value="C">A computer program that is designed to spread across devices.<br>
+                  <input type="radio" name="ans1" value="D">An online scam that targets users through e-mail.<br>
+                </div>
+                <section id="correct-explan" class="c-explan hidden">
+                  <p>Your answer is correct...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+                <section id="incorrect-explan" class="i-explan hidden">
+                  <p>Your answer is incorrect...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+              </div>
+              <div class="question-2 question-box">
+                <p class="question">2. What are the two main languages used to perform XSS?</p>
+                <div id="answer-choices2" class="answer-choices">
+                    <input type="radio" name="ans2" value="A">VBScript and ActiveX<br>
+                    <input type="radio" name="ans2" value="B">Python and CSS<br>
+                    <input type="radio" name="ans2" value="C">Flash and C#<br>
+                    <input type="radio" name="ans2" value="D">HTML and JavaScript<br>
+                </div>
+                <section id="correct-explan2" class="c-explan hidden">
+                  <p>Your answer is correct...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+                <section id="incorrect-explan2" class="i-explan hidden">
+                  <p>Your answer is incorrect...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+              </div>
+              <div class="question-3 question-box">
+                <p class="question">3. What are the types of XSS?</p>
+                <div id="answer-choices3" class="answer-choices">
+                  <div class="incorrect-ans3">
+                    <input type="radio" name="ans3" value="A">Mirrored XSS, IBM-based XSS, Scripted XSS<br>
+                    <input type="radio" name="ans3" value="B">Flash XSS, Super XSS, Storm XSS<br>
+                    <input type="radio" name="ans3" value="C">Stored XSS, Reflected XSS, DOM-Based XSS<br>
+                    <input type="radio" name="ans3" value="D">Static XSS, Dynamic XSS, Restore XSS<br>
+                  </div>
+                </div>
+                <section id="correct-explan3" class="c-explan hidden">
+                  <p>Your answer is correct...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+                <section id="incorrect-explan3" class="i-explan hidden">
+                  <p>Your answer is incorrect...</p>
+                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                </section>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./XSS_Learning_Page.js"></script>
+</html>
