@@ -4,13 +4,8 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif !important;
 }
-
-/* Navigation Bar */
-
-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
+.full-page {
+  height: max;
   width: 100%;
   height: 75px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);

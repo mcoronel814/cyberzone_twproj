@@ -1,0 +1,35 @@
+.main-container {
+    font-family: sans-serif;
+    background-color: #2a70b7;
+    color: #edf6f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    border: 1px solid #edf6f9;
+}
+
+.card-title {
+    font-size: 24pt;
+    padding-bottom: 0px;
+}
+
+.explanation-text {
+    font-size: 18pt;
+    padding-top: 10px;
+}
+
+.bullet-list {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 16pt;
+}
+
+.start-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #fddd0d;
+    font-size: 24pt;
+    color: #04080f;
+}
