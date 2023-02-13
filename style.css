@@ -102,6 +102,46 @@ section {
   background-position: center;
 }
 
+/* Learn Now Section */
+
+.column_ln {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: center;
+  background-color: #b1279e;
+  min-width: 160px;
+  z-index: 1;
+  text-align: center;
+}
+.links {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.links:hover {
+  background-color: rgb(84, 8, 107);
+}
+.dropdown:hover .menu-content {
+  display: block;
+}
+.dropdown:hover .menu-btn {
+  background-color: #3e8e41;
+}
+
 /* Resources Section */
 
 .wrapper {
@@ -124,7 +164,7 @@ section {
 .btn {
   display: block;
   padding: 15px 20px;
-  background-color: #c54d4d;
+  background-color: #4f4dc5;
   color: #fff;
   position: relative;
 }
@@ -146,7 +186,7 @@ section {
   font-size: 13px;
 }
 .subMenu {
-  background: #634c5a;
+  background: #a7a061;
   overflow: hidden;
   transition: max-height 0.7s;
   max-height: 0;
@@ -156,7 +196,7 @@ section {
   padding: 15px 20px;
   color: #fff;
   font-size: 14px;
-  border-bottom: 1px solid #4d69b6;
+  border-bottom: 1px solid #4f4dc5;
   position: relative;
 }
 .subMenu a:before {
@@ -194,15 +234,7 @@ section {
   border-bottom: 24px solid transparent;
 }
 .subMenu a:hover {
-  background: linear-gradient(
-    to bottom,
-    #27574d 0%,
-    #27574d 50%,
-    #275739 51%,
-    #275739 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273057', endColorstr='#394c7f',GradientType=0 );
-  transition: all 0.3s;
+  background-color: #275739;
 }
 .subMenu a:last-child {
   border: none;
