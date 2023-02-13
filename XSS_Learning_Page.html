@@ -6,103 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CyberZone</title>
     <link rel="stylesheet" href="XSS_Learning_Page.css" />
-    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body style="background: linear-gradient(#04080f, #303030);">
     <div class="full-page">
-      <div class="navbar">
-        <div>
-          <a href="./index.html">CyberZone</a>
-        </div>
-        <nav>
-          <ul id="MenuItems">
-            <li><a href="./Learn_Now.html">Learn Now</a></li>
-            <li><a href="./About_Us.html">About Us</a></li>
-            <li><a href="#">Resources</a></li>
-            <li>
-              <button
-                class="loginbtn"
-                onclick="document.getElementById('login-form').style.display='block'"
-                style="width: auto"
-              >
-                Login
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="login-form" class="login-page">
-        <div class="form-box">
-          <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" onclick="login()" class="toggle-btn">
-              Log In
-            </button>
-            <button type="button" onclick="register()" class="toggle-btn">
-              Register
-            </button>
-          </div>
-          <form id="login" class="input-group-login">
-            <input
-              type="text"
-              class="input-field"
-              placeholder="Email Id"
-              required
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Enter Password"
-              required
-            />
-            <input type="checkbox" class="check-box" /><span
-              >Remember Password</span
-            >
-            <button type="submit" class="submit-btn">Log in</button>
-          </form>
-          <form id="register" class="input-group-register">
-            <input
-              type="text"
-              class="input-field"
-              placeholder="First Name"
-              required
-            />
-            <input
-              type="text"
-              class="input-field"
-              placeholder="Last Name "
-              required
-            />
-            <input
-              type="email"
-              class="input-field"
-              placeholder="Email Id"
-              required
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Enter Password"
-              required
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Confirm Password"
-              required
-            />
-            <input type="checkbox" class="check-box" /><span
-              >I agree to the terms and conditions</span
-            >
-            <button type="submit" class="submit-btn">Register</button>
-          </form>
-        </div>
-      </div>
       <div id="XSS" class="learning-page">
         <div class="card--outlined">
           <section class="learning-text-section">
-            <h1 class="section-title">Introduction to Cross Site Scripting</h1>
+            <h1 class="text_title">Introduction to Cross Site Scripting</h1>
+            <h1 class="section-title">What is Cross Site Scripting?</h1>
             <p class="reading-text">
               Cross Site Scripting (XSS) is one of the most common and
               vulnerable attacks. XSS is an attack where malicious code is
@@ -173,11 +85,11 @@
                 </div>
                 <section id="correct-explan" class="c-explan hidden">
                   <p>Your answer is correct...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">XSS is...</p>
                 </section>
                 <section id="incorrect-explan" class="i-explan hidden">
                   <p>Your answer is incorrect...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">XSS is...</p>
                 </section>
               </div>
               <div class="question-2 question-box">
@@ -190,11 +102,11 @@
                 </div>
                 <section id="correct-explan2" class="c-explan hidden">
                   <p>Your answer is correct...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">The two main languages...</p>
                 </section>
                 <section id="incorrect-explan2" class="i-explan hidden">
                   <p>Your answer is incorrect...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">The two main languages...</p>
                 </section>
               </div>
               <div class="question-3 question-box">
@@ -209,11 +121,11 @@
                 </div>
                 <section id="correct-explan3" class="c-explan hidden">
                   <p>Your answer is correct...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">The main types are...</p>
                 </section>
                 <section id="incorrect-explan3" class="i-explan hidden">
                   <p>Your answer is incorrect...</p>
-                  <p class="explan-text">jkbadh kjdaeo;fh jashfh...</p>
+                  <p class="explan-text">The main types are...</p>
                 </section>
               </div>
             </form>

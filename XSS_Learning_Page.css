@@ -5,12 +5,17 @@
   color: #edf6f9;
   margin-top: 15px;
   width: max;
+  height: max;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .card--outlined {
   width: 1100px;
+}
+
+.text_title{
+  font-size: 24pt;
 }
 
 .section-title {
