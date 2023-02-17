@@ -1,0 +1,59 @@
+body {
+    background: #04080F;
+    width: max;
+    height: max;
+}
+.main-container {
+    font-family: sans-serif;
+    background-color: #edf6f9;
+    color: #04080F;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #edf6f9;
+}
+
+.icon-and-title{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 300px 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "fa-robot card-title"; 
+}
+
+.fa-robot {
+    grid-area: fa-robot;
+    font-size: 200px;
+    color: rgb(28, 98, 179)
+}
+
+.card-title {
+    grid-area: card-title;
+    font-size: 50pt;
+    padding-bottom: 0px;
+}
+
+.explanation-text {
+    grid-area: explanation-text;
+    font-size: 18pt;
+    padding-top: 10px;
+}
+
+.bullet-list {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 16pt;
+}
+
+.start-button {
+    grid-area: button;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #fddd0d;
+    font-size: 24pt;
+    color: #04080f;
+}

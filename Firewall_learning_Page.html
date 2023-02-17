@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberZone</title>
+    <link rel="stylesheet" href="Firewall_Learning_Page.css" />
+</head>
+
+<body style="background: linear-gradient(#04080f, #303030);">
+    <div class="full-page">
+        <div id="XSS" class="learning-page">
+            <div class="card--outlined">
+                <section class="learning-text-section">
+                    <h1 class="text_title">Introduction to Firewalls</h1>
+                    <h1 class="section-title">What is a Firewall?</h1>
+                    <p class="reading-text">
+                        A firewall is a network security device. It can be hardware or software-based, and it's used to
+                        monitor traffic based on the security rules it accepts, rejects, or drops.
+                    <div class="reading-bullet-list">
+                        <li class="reading-bullet">
+                            Accept: Allows traffic
+                        </li>
+                        <li class="reading-bullet">
+                            Reject: Denies traffic with a replay message
+                        </li>
+                        <li class="reading-bullet">
+                            Drop: Denies traffic without a reply message
+                        </li>
+                    </div>
+                    </p>
+                    <p class="reading-text">
+                        Overall, a firewall acts as a wall to protect local computers. It does so by gating the borders
+                        of private networks or devices.
+                    </p>
+                    <hr class="dashed-line">
+                    <h1 class="section-title">How does it work?</h1>
+                    <p class="reading-text">
+                        Firewalls match the networks' traffic against the rules defined in their table. These rules
+                        define those who can and cannot access such data. When the rule is matched, its consequential
+                        action follows (Accept, Reject, or Drop). Although firewalls can examine outgoing traffic, it's
+                        often that the incoming traffic is inspected. The traffic, when reached the firewall, is
+                        addressed upon the three major Transport Layer protocols - TCP, UDP, and ICMP. TCP and UDP use
+                        ports numbers, while ICMP uses a type code.
+                    </p>
+                    <hr class="dashed-line">
+                    <h1 class="section-title">Types of Firewalls</h1>
+                    <p class="reading-text">
+                    <div class="reading-bullet-list">
+                        <li class="reading-bullet">
+                            Packet Filtering Firewall<br>
+                            A firewall that compares the outgoing and incoming network packets through a set of
+                            established rules such as the allowed IP address, IP protocol, and port numbers.
+                        </li>
+                        <li class="reading-bullet">
+                            Stateful Inspection Firewall<br>
+                            This is a variation of the Pact Filtering Firewall. It not only examines each network packet
+                            but also checks if that packet is part of the established network connection. This firewall
+                            is also known as Dynamic Packet Filtering Firewall.
+                        </li>
+                        <li class="reading-bullet">
+                            Proxy Firewall<br>
+                            Also known as Application Level Gateway, prevents the direct connection between either side
+                            of the firewall. it does so by filtering the packets on any OSI layer, even up to the
+                            application layer. It has the ability to block certain content and recognize when certain
+                            applications are being misused.
+                        </li>
+                    </div>
+                    </p>
+                    <hr class="dashed-line">
+                    <form name="quiz" id="quiz" class="XSS-quiz">
+                        <div class="question-1">
+                            <p class="question">1. Dynamic Packet Filtering Firewall is also known as..</p>
+                            <div id="answer-choices1" class="answer-choices">
+                                <input type="radio" name="ans1" value="A">Seal Firewall<br>
+                                <input type="radio" name="ans1" value="B">Stateful Inspection Firewall<br>
+                                <input type="radio" name="ans1" value="C">Proxy Firewall<br>
+                                <input type="radio" name="ans1" value="D">Packet Filtering Firewall<br>
+                            </div>
+                            <section id="correct-explan" class="c-explan hidden">
+                                <p>Your answer is correct...</p>
+                                <p class="explan-text">Stateful Inspection Firewall is also known as Dynamic Packet
+                                    Filtering Firewall. This firewall is a variation of Packet Filtering Firewall.
+                                </p>
+                            </section>
+                            <section id="incorrect-explan" class="i-explan hidden">
+                                <p>Your answer is incorrect...</p>
+                                <p class="explan-text">Stateful Inspection Firewall is also known as Dynamic Packet
+                                    Filtering Firewall. This firewall is a variation of Packet Filtering Firewall.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="question-2 question-box">
+                            <p class="question">2. What are the three major Transport Layer protocols?</p>
+                            <div id="answer-choices2" class="answer-choices">
+                                <input type="radio" name="ans2" value="A"> TCP, ICMP, AND UDM<br>
+                                <input type="radio" name="ans2" value="B">UDP, IMDB, CBS<br>
+                                <input type="radio" name="ans2" value="C">ICMP, TCP, UDP<br>
+                                <input type="radio" name="ans2" value="D">TCP, ABC, DIS<br>
+                            </div>
+                            <section id="correct-explan2" class="c-explan hidden">
+                                <p>Your answer is correct...</p>
+                                <p class="explan-text">The three major Transport Layer protocols are TCP, UDP, and ICMP.
+                                </p>
+                            </section>
+                            <section id="incorrect-explan2" class="i-explan hidden">
+                                <p>Your answer is incorrect...</p>
+                                <p class="explan-text">The three major Transport Layer protocols are TCP, UDP, and ICMP.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="question-3 question-box">
+                            <p class="question">3. Which type of firewall prevents the direct connection between either
+                                end of the firewall?</p>
+                            <div id="answer-choices3" class="answer-choices">
+                                <div class="incorrect-ans3">
+                                    <input type="radio" name="ans3" value="A">Proxy Firewall
+                                    Surfers on their phone.<br>
+                                    <input type="radio" name="ans3" value="B">Space Defiance Firewall<br>
+                                    <input type="radio" name="ans3" value="C">State Inspection Firewall<br>
+                                    <input type="radio" name="ans3" value="D">Packet Filtering Firewall<br>
+                                </div>
+                            </div>
+                            <section id="correct-explan3" class="c-explan hidden">
+                                <p>Your answer is correct...</p>
+                                <p class="explan-text">Proxy Firewall prevents the direct connection between either end
+                                    of the firewall.</p>
+                            </section>
+                            <section id="incorrect-explan3" class="i-explan hidden">
+                                <p>Your answer is incorrect...</p>
+                                <p class="explan-text">Proxy Firewall prevents the direct connection between either end
+                                    of the firewall.</p>
+                            </section>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./Firewall_Learning_Page.js"></script>
+
+</html>
