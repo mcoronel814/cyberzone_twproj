@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Rooting_Learning_Page.css" />
 </head>
 
-<body style="background: linear-gradient(#04080f, #303030);">
+<body>
     <div class="full-page">
         <div id="XSS" class="learning-page">
             <div class="card--outlined">
@@ -45,78 +45,16 @@
                         or Anti-Virus protection to secure their data.
                     </p>
                     <hr class="dashed-line">
-                    <form name="quiz" id="quiz" class="XSS-quiz">
-                        <div class="question-1">
-                            <p class="question">1. Rooting for Android devices is most similar to...</p>
-                            <div id="answer-choices1" class="answer-choices">
-                                <input type="radio" name="ans1" value="A">JAIL Breaking for IOS<br>
-                                <input type="radio" name="ans1" value="B">Prison Riot for Linux<br>
-                                <input type="radio" name="ans1" value="C">Branching for Windows<br>
-                                <input type="radio" name="ans1" value="D">Planting for MacOS<br>
-                            </div>
-                            <section id="correct-explan" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">Android Rooting is most similar to JAIL Break for IOS products.
-                                </p>
-                            </section>
-                            <section id="incorrect-explan" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">Android Rooting is most similar to JAIL Break for IOS products.
-                                </p>
-                            </section>
-                        </div>
-                        <div class="question-2 question-box">
-                            <p class="question">2. Why is the main reson people root their Android devices?</p>
-                            <div id="answer-choices2" class="answer-choices">
-                                <input type="radio" name="ans2" value="A">Add contacts to their devices.<br>
-                                <input type="radio" name="ans2" value="B">To customize their devices.<br>
-                                <input type="radio" name="ans2" value="C">Access their personal data that's saved onto
-                                their device.<br>
-                                <input type="radio" name="ans2" value="D">To hack others using their phone.<br>
-                            </div>
-                            <section id="correct-explan2" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">The main reason root their Android devices is to customize their
-                                    phones.</p>
-                            </section>
-                            <section id="incorrect-explan2" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">The main reason root their Android devices is to customize their
-                                    phones.</p>
-                            </section>
-                        </div>
-                        <div class="question-3 question-box">
-                            <p class="question">3. What is the main risk of having a rooted phone?</p>
-                            <div id="answer-choices3" class="answer-choices">
-                                <div class="incorrect-ans3">
-                                    <input type="radio" name="ans3" value="A">User may not be able to access Subway
-                                    Surfers on their phone.<br>
-                                    <input type="radio" name="ans3" value="B">User may not like the customizations they
-                                    made to their phone.<br>
-                                    <input type="radio" name="ans3" value="C">The user may tamper with the security
-                                    settings, making it easier for others to steal their data<br>
-                                    <input type="radio" name="ans3" value="D">User may lose their contacts.<br>
-                                </div>
-                            </div>
-                            <section id="correct-explan3" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">The main risk of having a rooted phone is that data may be
-                                    stolen. This is so as rooting an Android device may weaken its security allowing
-                                    other to easily hack the phone and obtain data about its user.</p>
-                            </section>
-                            <section id="incorrect-explan3" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">The main risk of having a rooted phone is that data may be
-                                    stolen. This is so as rooting an Android device may weaken its security allowing
-                                    other to easily hack the phone and obtain data about its user.</p>
-                            </section>
-                        </div>
-                    </form>
+                    <div class="next-card">
+                        <p class="next-card-text">
+                            You completed the reading. Now, it's time to take the quiz. You'll need to score 80% or
+                            higher to pass. Please click the button below to begin.
+                        </p>
+                        <button onclick="location.href='/Rooting_Quiz_Page.html'">Begin Quiz</button>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 </body>
-<script src="./Rooting_Learning_Page.js"></script>
-
 </html>

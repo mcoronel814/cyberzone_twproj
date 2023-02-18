@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberZone</title>
+    <link rel="stylesheet" href="XSS_Quiz_Page.css" />
+</head>
+
+<body>
+    <form name="quiz" id="quiz" class="XSS-quiz">
+        <div class="question-1">
+            <p class="question">1. What is cross-site scripting?</p>
+            <div id="answer-choices1" class="answer-choices">
+              <input type="radio" name="ans1" value="A">Malicious code that is executed to redirect users to malicious websites to steal personal info.<br>
+              <input type="radio" name="ans1" value="B">Injection code used to steal information from databases.<br>
+              <input type="radio" name="ans1" value="C">A computer program that is designed to spread across devices.<br>
+              <input type="radio" name="ans1" value="D">An online scam that targets users through e-mail.<br>
+            </div>
+            <section id="correct-explan" class="c-explan hidden">
+              <p>The correct answer is malicious code that is executed to redirect users to malicious websites to steal personal info.</p>
+              <p class="explan-text">
+                XSS is an attack where malicious code is
+                injected into a website and is used to harm the victim’s browser.
+                The purpose of this attack is to steal the victim’s identity data.
+            </p>
+            </section>
+          </div>
+          <div class="question-2 question-box">
+            <p class="question">2. What are the two main languages used to perform XSS?</p>
+            <div id="answer-choices2" class="answer-choices">
+                <input type="radio" name="ans2" value="A">VBScript and ActiveX<br>
+                <input type="radio" name="ans2" value="B">Python and CSS<br>
+                <input type="radio" name="ans2" value="C">Flash and C#<br>
+                <input type="radio" name="ans2" value="D">HTML and JavaScript<br>
+            </div>
+            <section id="correct-explan2" class="c-explan hidden">
+              <p>HTML and JavaScript</p>
+              <p class="explan-text">
+                JavaScript, HTML, VBScript, and Flash are all used to perform XSS. Javascript and HTML are the most commonly used languages to perform XSS.
+            </p>
+            </section>
+          </div>
+          <div class="question-3 question-box">
+            <p class="question">3. What are the types of XSS?</p>
+            <div id="answer-choices3" class="answer-choices">
+              <div class="incorrect-ans3">
+                <input type="radio" name="ans3" value="A">Mirrored XSS, IBM-based XSS, Scripted XSS<br>
+                <input type="radio" name="ans3" value="B">Flash XSS, Super XSS, Storm XSS<br>
+                <input type="radio" name="ans3" value="C">Stored XSS, Reflective XSS, DOM-Based XSS<br>
+                <input type="radio" name="ans3" value="D">Static XSS, Dynamic XSS, Restore XSS<br>
+              </div>
+            </div>
+            <section id="correct-explan3" class="c-explan hidden">
+              <p>The correct answer is Static XSS, Dynamic XSS, Restore XSS</p>
+              <p class="explan-text">
+                Reflective XSS occurs when the results of a malicious script are
+                being returned to the website. Stored XSS is when the malicious script is being saved on the
+                webserver. DOM-based attacks are also called client-side XSS.
+            </p>
+            </section>
+        <div class="question-4 question-box">
+            <p class="question">4. Which type of XSS attack is also known as client-side XSS?</p>
+            <div id="answer-choices4" class="answer-choices">
+                <div class="incorrect-ans4">
+                    <input type="radio" name="ans4" value="A">Stactic XSS<br>
+                    <input type="radio" name="ans4" value="B">DOM-based XSS<br>
+                    <input type="radio" name="ans4" value="C">Stored XSS<br>
+                    <input type="radio" name="ans4" value="D">Reflective XSS<br>
+                </div>
+            </div>
+            <section id="correct-explan4" class="c-explan hidden">
+                <p>The correct answer is DOM-based XSS</p>
+                <p class="explan-text">
+                    DOM-based attacks are also called client-side XSS.
+                </p>
+            </section>
+        </div>
+        <div class="question-5 question-box">
+            <p class="question">5. Stored XSS is when...</p>
+            <div id="answer-choices5" class="answer-choices">
+                <div class="incorrect-ans5">
+                    <input type="radio" name="ans5" value="A">The malicious script is being saved on the webserver. <br>
+                    <input type="radio" name="ans5" value="B">The scripts are used to modify the user’s browser.<br>
+                    <input type="radio" name="ans5" value="C">The results of a malicious script are being returned to the website.<br>
+                    <input type="radio" name="ans5" value="D">The scripts are added to the victim's profile.<br>
+                </div>
+            </div>
+            <section id="correct-explan5" class="c-explan hidden">
+                <p>The correct answer is when the malicious script is being saved on the webserver</p>
+                <p class="explan-text">
+                    Stored XSS is when the malicious script is being saved on the webserver. This affects users on a larger scale because its able to to attack multiple users at the same time. 
+                </p>
+            </section>
+        </div>
+        <div id="submit-box" class="submit-box">
+            <input type="button" id="submit-button" class="submit-button button" value="Submit Answers" />
+        </div>
+        <div id="high-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="total-score" class="total-score"></p>
+            <p id="passed-text" class="passed-text score-explan">You passed! Although you don't get to retake the quiz,
+                you completed this section and can move on. Congratulations!</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+        <div id="retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="retry-total-score" class="total-score"></p>
+            <p id="retry-text" class="retry-text score-explan">Sadly, you didn't pass this attempt, but you can retake
+                the quiz. After this second attempt, you'll receive your final score.</p>
+            <input type="button" id="retry-button" class="retry-button button" value="Retry Quiz" />
+        </div>
+        <div id="low-retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="low-retry-total-score" class="total-score"></p>
+            <p id="low-retry-text" class="low-retry-text score-explan">Sadly, you used all of your attempts. Please take
+                note of the explanations and move on.</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+        <div id="high-retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="high-retry-total-score" class="total-score"></p>
+            <p id="high-retry-text" class="high-retry-text score-explan">Wow, you passed your second attempt! Please
+                make note of the explanations, but now you can move on.</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+    </form>
+</body>
+<script src="./XSS_Quiz_Page.js"></script>
+
+</html>

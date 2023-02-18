@@ -1,3 +1,6 @@
+body {
+    background: #04080F;
+}
 .learning-page {
     display: flex;
     justify-content: center;
@@ -8,95 +11,65 @@
     height: max;
     margin-left: 10px;
     margin-right: 10px;
-  }
+}
   
-  .card--outlined {
+.card--outlined {
     width: 1100px;
-  }
+}
   
-  .text_title{
-    font-size: 24pt;
-  }
   
-  .section-title {
+.text_title{
+    font-size: 35pt;
+    text-align: center;
+}
+  
+.section-title {
     margin: 5px;
     font-size: 18pt;
-  }
+}
   
-  .reading-text {
+.reading-text {
     font-size: 14pt;
-  }
+}
   
-  .reading-bullet-list {
+.reading-bullet-list {
     margin-top: 10px;
     font-size: 14pt;
-  }
+}
   
-  .reading-bullet {
+.reading-bullet {
     margin-bottom: 10px;
     margin-left: 20px;
-  }
+}
   
-  .dashed-line {
+.dashed-line {
     border: 1px solid #95c623;
     margin-top: 10px;
     margin-bottom: 20px;
-  }
+}
   
-  #quiz {
+.next-card {
+    display: flexbox;
     background-color: #edf6f9;
-    color: #04080f;
-    font-family: sans-serif;
-    font-size: 16pt;
-    border-radius: 20px;
-    padding: 20px;
-  }
-  
-  .question {
-    font-size: 18pt;
-    margin-bottom: 10px;
-  }
-  
-  .question-box {
-    margin-top: 15px;
-  }
-  
-  input {
-    font-size: 18pt;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    background-color: #040404;
-    color: #edf6f9;
-  }
-  
-  .c-explan {
-    background-color: #95c623;
-    color: #edf6f9;
-    font-family: sans-serif;
-    font-size: 16pt;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .i-explan {
-    background-color: #9f171c;
-    color: #edf6f9;
-    font-family: sans-serif;
-    font-size: 16pt;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .explan-text {
-    font-size: 14pt;
-  }
-  
+    color: #04080F;
+    padding: 5px;
+    border-radius: 10px;
+    height:180px;
+}
+.next-card-text {
+    text-align: center;
+    font-size: 20pt;
+}
+
+button {
+    display: grid;
+    margin:auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #fddd0d;
+    font-size: 24pt;
+    margin-bottom: 2px;
+    padding: 5px;
+}

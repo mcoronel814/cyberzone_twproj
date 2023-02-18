@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberZone</title>
+    <link rel="stylesheet" href="Rooting_Quiz_Page.css" />
+</head>
+
+<body>
+    <form name="quiz" id="quiz" class="XSS-quiz">
+        <div class="question-1">
+            <p class="question">1. Rooting for Android devices is most similar to...</p>
+            <div id="answer-choices1" class="answer-choices">
+                <input type="radio" name="ans1" value="A">JAIL Breaking for IOS<br>
+                <input type="radio" name="ans1" value="B">Prison Riot for Linux<br>
+                <input type="radio" name="ans1" value="C">Branching for Windows<br>
+                <input type="radio" name="ans1" value="D">Planting for MacOS<br>
+            </div>
+            <section id="correct-explan" class="c-explan hidden">
+                <p>The correct answer is JAIL Breaking for IOS.</p>
+                <p class="explan-text">Android Rooting is most similar to JAIL Break for IOS products. This is so as
+                    they both can be done by installing applications.
+                </p>
+            </section>
+        </div>
+        <div class="question-2 question-box">
+            <p class="question">2. Why is the main reson people root their Android devices?</p>
+            <div id="answer-choices2" class="answer-choices">
+                <input type="radio" name="ans2" value="A">Add contacts to their devices.<br>
+                <input type="radio" name="ans2" value="B">To customize their devices.<br>
+                <input type="radio" name="ans2" value="C">Access their personal data that's saved onto
+                their device.<br>
+                <input type="radio" name="ans2" value="D">To hack others using their phone.<br>
+            </div>
+            <section id="correct-explan2" class="c-explan hidden">
+                <p>The correct answer is to customize their devices</p>
+                <p class="explan-text">The main reason root their Android devices is to customize their
+                    phones.</p>
+            </section>
+        </div>
+        <div class="question-3 question-box">
+            <p class="question">3. What is the main risk of having a rooted phone?</p>
+            <div id="answer-choices3" class="answer-choices">
+                <div class="incorrect-ans3">
+                    <input type="radio" name="ans3" value="A">User may not be able to access Subway
+                    Surfers on their phone.<br>
+                    <input type="radio" name="ans3" value="B">User may not like the customizations they
+                    made to their phone.<br>
+                    <input type="radio" name="ans3" value="C">The user may tamper with the security
+                    settings, making it easier for others to steal their data<br>
+                    <input type="radio" name="ans3" value="D">User may lose their contacts.<br>
+                </div>
+            </div>
+            <section id="correct-explan3" class="c-explan hidden">
+                <p>The correct answer is the user may tamper with the security
+                    settings, making it easier for others to steal their data</p>
+                <p class="explan-text">The main risk of having a rooted phone is that data may be
+                    stolen. This is so as rooting an Android device may weaken its security allowing
+                    other to easily hack the phone and obtain data about its user.</p>
+            </section>
+        </div>
+        <div class="question-4 question-box">
+            <p class="question">4. What does SU stand for??</p>
+            <div id="answer-choices4" class="answer-choices">
+                <div class="incorrect-ans4">
+                    <input type="radio" name="ans4" value="A">Switch User<br>
+                    <input type="radio" name="ans4" value="B">Superuser<br>
+                    <input type="radio" name="ans4" value="C">Superior User<br>
+                    <input type="radio" name="ans4" value="D">Supreme User<br>
+                </div>
+            </div>
+            <section id="correct-explan4" class="c-explan hidden">
+                <p>The correct answer is Switch User</p>
+                <p class="explan-text">The main risk of having a rooted phone is that data may be
+                    stolen. This is so as rooting an Android device may weaken its security allowing
+                    other to easily hack the phone and obtain data about its user.</p>
+            </section>
+        </div>
+        <div class="question-5 question-box">
+            <p class="question">5. What are the top two apps used for rooting?</p>
+            <div id="answer-choices5" class="answer-choices">
+                <div class="incorrect-ans5">
+                    <input type="radio" name="ans5" value="A">Kinguser and Candy Crush<br>
+                    <input type="radio" name="ans5" value="B">Minecraft and Superuser<br>
+                    <input type="radio" name="ans5" value="C">Roblox and Microsoft<br>
+                    <input type="radio" name="ans5" value="D">Kinguser and Superuser<br>
+                </div>
+            </div>
+            <section id="correct-explan5" class="c-explan hidden">
+                <p>The correct answer is Kinguser and Superuser</p>
+                <p class="explan-text">Kinguser and Superuser are the most well-known apps for rooting an Android phone.
+                    Seeing them installed on your Android device is a good sign that your device was rooted.</p>
+            </section>
+        </div>
+        <div id="submit-box" class="submit-box">
+            <input type="button" id="submit-button" class="submit-button button" value="Submit Answers" />
+        </div>
+        <div id="high-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="total-score" class="total-score"></p>
+            <p id="passed-text" class="passed-text score-explan">You passed! Although you don't get to retake the quiz,
+                you completed this section and can move on. Congratulations!</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+        <div id="retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="retry-total-score" class="total-score"></p>
+            <p id="retry-text" class="retry-text score-explan">Sadly, you didn't pass this attempt, but you can retake
+                the quiz. After this second attempt, you'll receive your final score.</p>
+            <input type="button" id="retry-button" class="retry-button button" value="Retry Quiz" />
+        </div>
+        <div id="low-retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="low-retry-total-score" class="total-score"></p>
+            <p id="low-retry-text" class="low-retry-text score-explan">Sadly, you used all of your attempts. Please take
+                note of the explanations and move on.</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+        <div id="high-retry-score-box" class="score-box hidden">
+            <p id="total-score-text" class="total-score-text">This is your score:</p>
+            <p id="high-retry-total-score" class="total-score"></p>
+            <p id="high-retry-text" class="high-retry-text score-explan">Wow, you passed your second attempt! Please
+                make note of the explanations, but now you can move on.</p>
+            <input type="button" id="next-button" class="next-button button" value="Move On"
+                onclick="location.href='/user_dashboard.html'" />
+        </div>
+    </form>
+</body>
+<script src="./Rooting_Quiz_Page.js"></script>
+
+</html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Firewall_Learning_Page.css" />
 </head>
 
-<body style="background: linear-gradient(#04080f, #303030);">
+<body>
     <div class="full-page">
         <div id="XSS" class="learning-page">
             <div class="card--outlined">
@@ -70,76 +70,16 @@
                     </div>
                     </p>
                     <hr class="dashed-line">
-                    <form name="quiz" id="quiz" class="XSS-quiz">
-                        <div class="question-1">
-                            <p class="question">1. Dynamic Packet Filtering Firewall is also known as..</p>
-                            <div id="answer-choices1" class="answer-choices">
-                                <input type="radio" name="ans1" value="A">Seal Firewall<br>
-                                <input type="radio" name="ans1" value="B">Stateful Inspection Firewall<br>
-                                <input type="radio" name="ans1" value="C">Proxy Firewall<br>
-                                <input type="radio" name="ans1" value="D">Packet Filtering Firewall<br>
-                            </div>
-                            <section id="correct-explan" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">Stateful Inspection Firewall is also known as Dynamic Packet
-                                    Filtering Firewall. This firewall is a variation of Packet Filtering Firewall.
-                                </p>
-                            </section>
-                            <section id="incorrect-explan" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">Stateful Inspection Firewall is also known as Dynamic Packet
-                                    Filtering Firewall. This firewall is a variation of Packet Filtering Firewall.
-                                </p>
-                            </section>
-                        </div>
-                        <div class="question-2 question-box">
-                            <p class="question">2. What are the three major Transport Layer protocols?</p>
-                            <div id="answer-choices2" class="answer-choices">
-                                <input type="radio" name="ans2" value="A"> TCP, ICMP, AND UDM<br>
-                                <input type="radio" name="ans2" value="B">UDP, IMDB, CBS<br>
-                                <input type="radio" name="ans2" value="C">ICMP, TCP, UDP<br>
-                                <input type="radio" name="ans2" value="D">TCP, ABC, DIS<br>
-                            </div>
-                            <section id="correct-explan2" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">The three major Transport Layer protocols are TCP, UDP, and ICMP.
-                                </p>
-                            </section>
-                            <section id="incorrect-explan2" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">The three major Transport Layer protocols are TCP, UDP, and ICMP.
-                                </p>
-                            </section>
-                        </div>
-                        <div class="question-3 question-box">
-                            <p class="question">3. Which type of firewall prevents the direct connection between either
-                                end of the firewall?</p>
-                            <div id="answer-choices3" class="answer-choices">
-                                <div class="incorrect-ans3">
-                                    <input type="radio" name="ans3" value="A">Proxy Firewall
-                                    Surfers on their phone.<br>
-                                    <input type="radio" name="ans3" value="B">Space Defiance Firewall<br>
-                                    <input type="radio" name="ans3" value="C">State Inspection Firewall<br>
-                                    <input type="radio" name="ans3" value="D">Packet Filtering Firewall<br>
-                                </div>
-                            </div>
-                            <section id="correct-explan3" class="c-explan hidden">
-                                <p>Your answer is correct...</p>
-                                <p class="explan-text">Proxy Firewall prevents the direct connection between either end
-                                    of the firewall.</p>
-                            </section>
-                            <section id="incorrect-explan3" class="i-explan hidden">
-                                <p>Your answer is incorrect...</p>
-                                <p class="explan-text">Proxy Firewall prevents the direct connection between either end
-                                    of the firewall.</p>
-                            </section>
-                        </div>
-                    </form>
+                    <div class="next-card">
+                        <p class="next-card-text">
+                            You completed the reading. Now, it's time to take the quiz. You'll need to score 80% or
+                            higher to pass. Please click the button below to begin.
+                        </p>
+                        <button onclick="location.href='/FireWall_Quiz_Page.html'">Begin Quiz</button>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 </body>
-<script src="./Firewall_Learning_Page.js"></script>
-
 </html>
